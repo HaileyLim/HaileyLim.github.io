@@ -1,0 +1,98 @@
+<!-- 카테고리 추가시 본 페이지 수정. -->
+
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <li>
+          🗂️ <span style="">전체 글 수</style> <span style="">{{sum}}</style> <span style="">개</style>
+      </li>
+      <li>
+        <!-- <span class="nav__sub-title">C/C++/C#</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Cpp" %}
+                        <li><a href="/categories/cpp" class="">C ++ ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul> -->
+
+            <span class="nav__sub-title"> 🔆 Network</span>
+
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "NetworkProgramming" %}
+                        <li><a href="/categories/nprogramming" class="">네트워크 프로그래밍 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+              {% for category in site.categories %}
+                  {% if category[0] == "API" %}
+                      <li><a href="/categories/api" class="">API ({{category[1].size}})</a></li>
+                  {% endif %}
+              {% endfor %}
+            </ul>
+            <ul>
+              {% for category in site.categories %}
+                  {% if category[0] == "NetworkTest" %}
+                      <li><a href="/categories/ntest" class="">network Test ({{category[1].size}})</a></li>
+                  {% endif %}
+              {% endfor %}
+          </ul>
+
+            <span class="nav__sub-title"> 🔆 Data</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "data" %}
+                        <li><a href="/categories/data" class="">Data ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "rendering" %}
+                        <li><a href="/categories/rendering" class="">Rendering ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+              {% for category in site.categories %}
+                  {% if category[0] == "DataTest" %}
+                      <li><a href="/categories/dtest" class="">Data Test ({{category[1].size}})</a></li>
+                  {% endif %}
+              {% endfor %}
+          </ul>
+
+        <span class="nav__sub-title"> 🔆 ETC</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Blog" %}
+                        <li><a href="/categories/blog" class="">깃헙 블로그 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Video" %}
+                        <li><a href="/categories/video" class="">동영상 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "etc" %}
+                        <li><a href="/categories/etc" class="">기타 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+      </li>
+      <li>
+            <br>
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fansohxxn.github.io&count_bg=%23FFCC35&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false">
+      </li>
+  </ul>
+</nav>
+
